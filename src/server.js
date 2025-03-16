@@ -29,9 +29,9 @@ const START_SERVER = () => {
       console.log(`Hello Production ${env.AUTHOR}, I am running at port: ${process.env.PORT}/`)
     })
   } else {
-    app.listen(env.APP_PORT, env.APP_HOST, () => {
+    app.listen(env.LOCAL_APP_PORT, env.LOCAL_APP_HOST, () => {
       // eslint-disable-next-line no-console
-      console.log(`Hello Local Dev ${env.AUTHOR}, I am running at http://${env.APP_HOST}:${env.APP_PORT}/`)
+      console.log(`Hello Local Dev ${env.AUTHOR}, I am running at http://${env.LOCAL_APP_HOST}:${env.LOCAL_APP_PORT}/`)
     })
   }
 
