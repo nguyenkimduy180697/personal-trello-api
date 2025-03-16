@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import express from 'express'
 import cors from 'cors'
-import { coreOptions } from './config/cors'
+import { corsOptions } from './config/cors'
 import { CONNECT_DB, GET_DB, CLOSE_DB } from './config/mongodb'
 import exitHook from 'async-exit-hook'
 import { env } from './config/environment'
@@ -12,7 +12,7 @@ const START_SERVER = () => {
   const app = express()
 
   //Xuwr lys CORS
-  app.use(cors(coreOptions))
+  app.use(cors(corsOptions))
 
   // Enable req.body json data
   app.use(express.json())
@@ -26,12 +26,12 @@ const START_SERVER = () => {
   if (env.BUILD_MODE === 'production') {
     app.listen(process.env.PORT, () => {
       // eslint-disable-next-line no-console
-      console.log(`Hello Production ${env.AUTHOR}, I am running at port: ${process.env.PORT}/`)
+      console.log(`Production ${env.AUTHOR}, Port: ${process.env.PORT}/`)
     })
   } else {
     app.listen(env.LOCAL_APP_PORT, env.LOCAL_APP_HOST, () => {
       // eslint-disable-next-line no-console
-      console.log(`Hello Local Dev ${env.AUTHOR}, I am running at http://${env.LOCAL_APP_HOST}:${env.LOCAL_APP_PORT}/`)
+      console.log(`Local Dev ${env.AUTHOR}, http://${env.LOCAL_APP_HOST}:${env.LOCAL_APP_PORT}/`)
     })
   }
 
