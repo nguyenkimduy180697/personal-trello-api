@@ -20,12 +20,12 @@
 
 Author: **Nguyễn Kim Duy**
 
-Blog: https://nguyenkimduydev.com/
-
-CV: https://cv.nguyenkimduydev.com/
+Blog: https://nguyenkimduy.com/
 
 "Just do it!"
-
 "1% Better Everyday!"
-
 Thanks for watching!
+
+Nguồn:
+[FULL STACK] MERN PRO • Học lập trình Front-end + Back-end | Làm dự án thực tế Trello kéo thả | ReactJS, NodeJS, MongoDB | TrungQuanDev
+https://www.youtube.com/@trungquandev
